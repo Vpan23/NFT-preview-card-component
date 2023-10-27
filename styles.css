@@ -131,7 +131,7 @@ body {
   color: var(--var-clr-Soft-blue);
   margin-top: 1rem;
 }
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 1440px) {
   .card {
     max-width: 250px;
   }
