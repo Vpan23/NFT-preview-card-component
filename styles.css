@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+:root {
+  /* ### Primary */
+
+  --var-clr-Soft-blue: hsl(215, 51%, 70%);
+  --var-clr-Cyan: hsl(178, 100%, 50%);
+  --var-clr-Cyan-transparent: hsla(178, 100%, 50%, 0.514);
+
+  /* ### Neutral */
+
+  --var-clr-Very-dark-blue-main-BG: hsl(217, 54%, 11%);
+  --var-clr-Very-dark-blue-card-BG: hsl(216, 50%, 16%);
+  --var-clr-Very-dark-blue-line: hsl(215, 32%, 27%);
+  --var-clr-White: hsl(0, 0%, 100%);
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Outfit", sans-serif;
+  color: var(--var-clr-White);
+  background: var(--var-clr-Very-dark-blue-main-BG);
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+.card {
+  width: 100%;
+  max-width: 300px;
+  background: var(--var-clr-Very-dark-blue-card-BG);
+  padding: 1.5rem;
+  border-radius: 1rem;
+}
+.equilibrium {
+  width: 100%;
+  border-radius: 0.5rem;
+}
+.equilibrium:hover .svg-view {
+  opacity: 1;
+}
+.svg-overlay {
+  position: relative;
+}
+.svg__contain {
+  position: absolute;
+  width: 100%;
+  height: 98%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--var-clr-Cyan-transparent);
+  top: 0;
+  left: 0;
+  margin: 0 auto;
+  opacity: 0;
+  transition: all ease-in 0.5s;
+  border-radius: .5rem;
+}
+.svg-overlay:hover .svg__contain {
+  cursor: pointer;
+  opacity: 1;
+  transition: all ease-in 0.5s;
+}
+.svg-view {
+  width: 35px;
+}
+.creator {
+  margin-left: 1rem;
+}
+.name {
+  color: var(--var-clr-White);
+}
+.card__title:hover,
+.name:hover {
+  color: var(--var-clr-Cyan);
+  cursor: pointer;
+  transition: all ease 0.3s;
+}
+.card__title {
+  font-size: 18px;
+  margin: 1rem 0;
+}
+.card__description {
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--var-clr-Soft-blue);
+}
+.user-picture {
+  width: 27px;
+  height: 27px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+}
+.card__information {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--var-clr-Soft-blue);
+  padding: 1rem 0;
+}
+.card__information span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+}
+.card__information span img {
+  width: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin-right: 5px;
+}
+.card__value {
+  color: var(--var-clr-Cyan);
+}
+.card__day {
+  color: var(--var-clr-Soft-blue);
+}
+.reference {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  font-size: 14px;
+  color: var(--var-clr-Soft-blue);
+  margin-top: 1rem;
+}
+@media screen and (min-width: 750px) {
+  .card {
+    max-width: 250px;
+  }
+}
